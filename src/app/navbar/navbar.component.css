@@ -15,6 +15,7 @@ nav {
   gap: 0.8rem;
 }
 
+.todo,
 a {
   /* https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css */
   color: inherit;
@@ -27,10 +28,19 @@ a {
   border-radius: 0.2rem;
 }
 
-a:hover {
+.todo:hover {
   background-color: var(--blue-600);
 }
 
-a:active {
+.todo:active {
   background-color: var(--blue-800);
+}
+
+.home {
+  background-color: initial;
+  border: 1px solid grey;
+}
+
+.home:active {
+  opacity: 0.6;
 }

@@ -1,0 +1,16 @@
+<!-- https://angular.io/start/start-forms#using-forms-for-user-input -->
+
+<div class="container">
+  <h2>Login</h2>
+  <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div>
+      <label for="email-input">Email</label>
+      <input type="email" id="email-input" formControlName="email" required />
+    </div>
+    <div>
+      <label for="password-input">Password</label>
+      <input type="password" id="password-input" formControlName="password" required />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
