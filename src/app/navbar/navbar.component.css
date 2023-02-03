@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: var(--slate-900);
+  padding: 0.8rem 1rem;
+}
+
+.left-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+a {
+  /* https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css */
+  color: inherit;
+  text-decoration: inherit;
+
+  display: block;
+  padding: 0.6rem 1rem;
+
+  background-color: var(--blue-700);
+  border-radius: 0.2rem;
+}
+
+a:hover {
+  background-color: var(--blue-600);
+}
+
+a:active {
+  background-color: var(--blue-800);
+}
