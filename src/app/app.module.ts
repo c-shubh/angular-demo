@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LoginComponent, TodoListComponent],
+  declarations: [AppComponent, NavbarComponent, LoginComponent, TodoListComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
