@@ -32,6 +32,11 @@ export class TodoService {
     this.save();
   }
 
+  delete(id: Todo['id']) {
+    this.todos = this.todos.filter((todo) => todo.id !== id);
+    this.save();
+  }
+
   toggle(id: Todo['id']) {
     const requiredTodo = this.todos.find((todo) => todo.id === id)!;
     requiredTodo.completed = !requiredTodo.completed;

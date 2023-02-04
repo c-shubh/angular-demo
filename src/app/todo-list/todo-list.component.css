@@ -70,6 +70,7 @@ ul > * + * {
 li {
   display: flex;
   justify-content: space-between;
+  gap: 0.2rem;
 }
 
 .light {
@@ -80,6 +81,28 @@ li {
   text-decoration: line-through;
 }
 
+.todo-text {
+  flex-grow: 1;
+}
+
 input[type='checkbox'] {
-  width: 3rem;
+  width: 2rem;
+}
+
+li > button {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  cursor: pointer;
+  opacity: 0.7;
+  display: block;
+  width: 1.1rem;
+}
+
+.no-todos {
+  text-align: center;
 }

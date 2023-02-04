@@ -50,4 +50,9 @@ export class TodoListComponent {
     this.todoService.add(this.todoForm.value.title!);
     this.todoForm.reset();
   }
+
+  onDelete(id: Todo['id']) {
+    this.todoService.delete(id);
+    this.getTodos();
+  }
 }
