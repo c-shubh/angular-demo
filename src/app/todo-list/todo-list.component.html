@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Todo List</h2>
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+    <input type="text" formControlName="title" placeholder="Enter your todo here" required="true" autofocus />
+    <button type="submit">Add</button>
+  </form>
+  <div class="controls" [formGroup]="controlsForm">
+    <div>
+      <input type="radio" formControlName="control" value="all" id="all" checked />
+      <label for="all">All</label>
+    </div>
+    <div>
+      <input type="radio" formControlName="control" value="completed" id="completed" />
+      <label for="completed">Completed</label>
+    </div>
+    <div>
+      <input type="radio" formControlName="control" value="not-completed" id="not-completed" />
+      <label for="not-completed">Not completed</label>
+    </div>
+  </div>
+  <div *ngIf="todos.length">
+    <ul>
+      <li *ngFor="let todo of todos" [class.light]="todo.completed">
+        <div class="todo-text" [class.strikethrough]="todo.completed">
+          {{ todo.title }}
+        </div>
+        <input type="checkbox" [checked]="todo.completed" (change)="toggleTodo(todo)" />
+      </li>
+    </ul>
+  </div>
+</div>

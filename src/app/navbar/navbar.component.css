@@ -7,7 +7,7 @@ nav {
   justify-content: space-between;
   color: white;
   background-color: var(--slate-900);
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .left-links {
@@ -22,7 +22,7 @@ a {
   text-decoration: inherit;
 
   display: block;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
 
   background-color: var(--blue-700);
   border-radius: 0.2rem;
