@@ -20,7 +20,7 @@
   </div>
   <div *ngIf="todos.length">
     <ul>
-      <li *ngFor="let todo of todos" [class.light]="todo.completed">
+      <li *ngFor="let todo of filter(todos)" [class.light]="todo.completed">
         <div class="todo-text" [class.strikethrough]="todo.completed">
           {{ todo.title }}
         </div>

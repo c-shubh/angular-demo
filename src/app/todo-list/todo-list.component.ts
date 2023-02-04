@@ -17,7 +17,7 @@ export class TodoListComponent {
     control: 'all',
   });
 
-  todos = this.todoService.todoList;
+  todos: Todo[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,27 +25,25 @@ export class TodoListComponent {
   ) {}
 
   ngOnInit() {
-    this.controlsForm.valueChanges.subscribe(<any>this.onControlChange);
+    this.getTodos();
   }
 
-  onControlChange = (val: TodoListControls) => {
-    switch (val.control) {
-      case 'all':
-        this.todos = this.todoService.todoList;
-        break;
+  getTodos() {
+    this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
+  }
+
+  filter(todos: Todo[]) {
+    switch (this.controlsForm.value.control) {
       case 'completed':
-        this.todos = this.todoService.todoList.filter((todo) => todo.completed);
-        break;
+        return todos.filter((todo) => todo.completed);
       case 'not-completed':
-        this.todos = this.todoService.todoList.filter(
-          (todo) => !todo.completed
-        );
-        break;
+        return todos.filter((todo) => !todo.completed);
     }
-  };
+    return todos;
+  }
 
   toggleTodo(todo: Todo) {
-    todo.completed = !todo.completed;
+    this.todoService.toggle(todo.id);
   }
 
   onSubmit() {
