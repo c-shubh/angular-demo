@@ -17,8 +17,8 @@ export class LoginComponent {
 
   onSubmit() {
     /* POST form data to server here */
-
-    console.log(this.loginForm.value);
+    alert(JSON.stringify(this.loginForm.value));
+    this.loginForm.reset();
     this.router.navigateByUrl('/');
   }
 }
