@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { v4 as uuidv4 } from 'uuid';
 import { LocalStorageService } from './local-storage.service';
 import { Todo } from './types';
 
@@ -25,7 +24,7 @@ export class TodoService {
 
   add(title: Todo['title']) {
     this.todos.push({
-      id: uuidv4(),
+      id: crypto.randomUUID(),
       title: title,
       completed: false,
     });
