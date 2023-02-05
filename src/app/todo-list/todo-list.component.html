@@ -25,7 +25,7 @@
           {{ todo.title }}
         </div>
         <input type="checkbox" [checked]="todo.completed" (change)="toggleTodo(todo.id)" />
-        <button type="button" (click)="onDelete(todo.id)"><img src="../../assets/trash.svg" alt="trash icon" /></button>
+        <button type="button" (click)="onDelete(todo.id)"><img src="assets/trash.svg" alt="trash icon" /></button>
       </li>
     </ul>
   </div>
