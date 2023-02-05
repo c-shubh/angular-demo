@@ -42,8 +42,8 @@ export class TodoListComponent {
     return todos;
   }
 
-  toggleTodo(todo: Todo) {
-    this.todoService.toggle(todo.id);
+  toggleTodo(id: Todo['id']) {
+    this.todoService.toggle(id);
   }
 
   onSubmit() {

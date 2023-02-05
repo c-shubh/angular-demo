@@ -8,7 +8,7 @@ import { Todo } from './types';
   providedIn: 'root',
 })
 export class TodoService {
-  TODO_STORE = 'todoStore';
+  private TODO_STORE = 'todoStore';
   private todos: Todo[] = this.getTodosObj();
 
   constructor(private localStorageService: LocalStorageService) {}
